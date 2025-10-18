@@ -11,11 +11,11 @@ class CustomsBoxDecoration {
       color: color ?? context.appColors.white,
       borderRadius: BorderRadius.all(Radius.circular(12)),
       border: border
-          ? Border.all(color: context.appColors.primaryPurple, width: 1)
+          ? Border.all(color: context.appColors.teal, width: 1)
           : null,
       boxShadow: [
         BoxShadow(
-          color: context.appColors.navyBlue.withAlpha((0.4 * 255).toInt()),
+          color: context.appColors.greyNavBar.withAlpha((0.4 * 255).toInt()),
           offset: const Offset(-2, 4),
           blurRadius: 6,
           spreadRadius: 1,
@@ -29,7 +29,7 @@ class CustomsBoxDecoration {
       color: context.appColors.white,
       boxShadow: [
         BoxShadow(
-          color: context.appColors.primaryGrey.withAlpha((0.4 * 255).toInt()),
+          color: context.appColors.teal.withAlpha((0.4 * 255).toInt()),
           blurRadius: 2,
           offset: const Offset(0, 3),
         ),
@@ -41,7 +41,7 @@ class CustomsBoxDecoration {
     return BoxDecoration(
       shape: BoxShape.rectangle,
       color: context.appColors.white,
-      border: Border.all(color: context.appColors.primaryPurple, width: 1),
+      border: Border.all(color: context.appColors.teal, width: 1),
       borderRadius: BorderRadius.circular(10),
     );
   }
@@ -50,7 +50,7 @@ class CustomsBoxDecoration {
     return BoxDecoration(
       color: context.appColors.white,
       shape: BoxShape.circle,
-      border: Border.all(color: context.appColors.primaryPurple, width: 1),
+      border: Border.all(color: context.appColors.teal, width: 1),
     );
   }
 }

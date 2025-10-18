@@ -20,7 +20,7 @@ class CustomBottomNavBar extends StatelessWidget {
       builder: (context, currentIndex) {
         return Container(
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-          decoration: BoxDecoration(color: context.appColors.offWhite),
+          decoration: BoxDecoration(color: context.appColors.white),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: List.generate(items.length, (index) {
@@ -40,7 +40,7 @@ class CustomBottomNavBar extends StatelessWidget {
                   ),
                   decoration: BoxDecoration(
                     color: isSelected
-                        ? context.appColors.primaryPurple
+                        ? context.appColors.teal
                         : Colors.transparent,
                     borderRadius: BorderRadius.circular(24),
                   ),
@@ -50,7 +50,7 @@ class CustomBottomNavBar extends StatelessWidget {
                         item.icon,
                         color: isSelected
                             ? context.appColors.white
-                            : context.appColors.primaryGrey,
+                            : context.appColors.teal,
                         size: 20,
                       ),
                       if (isSelected) ...[

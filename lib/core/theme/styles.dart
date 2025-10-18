@@ -8,30 +8,30 @@ abstract class AppStyles {
   static TextStyle textStyle18(BuildContext context) => TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.bold,
-    color: context.appColors.primaryPurple,
+    color: context.appColors.black,
   );
 
   static TextStyle textStyle20(BuildContext context) => TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.w400,
-    color: context.appColors.navyBlue,
+    color: context.appColors.greyNavBar,
   );
 
   static TextStyle textStyle14(BuildContext context) => TextStyle(
     fontSize: 14,
     fontWeight: FontWeight.bold,
-    color: context.appColors.navyBlue,
+    color: context.appColors.black,
   );
 
   static TextStyle textStyle16(BuildContext context) => TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w600,
-    color: context.appColors.navyBlue,
+    color: context.appColors.black,
   );
   static TextStyle textStyle16w400(BuildContext context) => TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w400,
-    color: context.appColors.navyBlue,
+    color: context.appColors.black,
   );
 
   static TextStyle textStyle24(BuildContext context) => TextStyle(
@@ -43,7 +43,7 @@ abstract class AppStyles {
   static TextStyle textStyle12(BuildContext context) => TextStyle(
     fontSize: 12,
     fontWeight: FontWeight.w400,
-    color: context.appColors.primaryGrey,
+    color: context.appColors.black,
   );
 
   static TextStyle textStyle22(BuildContext context) => TextStyle(

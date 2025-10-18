@@ -1,12 +1,11 @@
-
 import 'package:cat_api/features/home/presentation/screens/home_screen.dart';
 import 'package:cat_api/features/nav_bar/presentation/manager/nav_bar_cubit/navbar_cubit.dart';
 import 'package:cat_api/features/nav_bar/presentation/view/widgets/custom_buttom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class NavBarView extends StatelessWidget {
-  const NavBarView({super.key});
+class NavBarScreen extends StatelessWidget {
+  const NavBarScreen({super.key});
 
   final List<Widget> pages = const [
     HomeScreen(),
