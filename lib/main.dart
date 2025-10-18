@@ -1,6 +1,6 @@
 import 'package:cat_api/core/theme/thems.dart';
-import 'package:cat_api/features/nav_bar/presentation/manager/nav_bar_cubit/navbar_cubit.dart';
-import 'package:cat_api/features/nav_bar/presentation/view/nav_bar_screen.dart';
+import 'package:cat_api/features/nav_bar/presentation/manager/nav_bar_cubit/navbar_cubit.dart'; 
+import 'package:cat_api/features/splash/splash._screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: BlocProvider(
         create: (context) => NavBarCubit(),
-        child: const NavBarScreen(),
+        child: const SplashScreen(),
       ),
     );
   }
