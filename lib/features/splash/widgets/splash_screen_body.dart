@@ -1,5 +1,5 @@
-import 'package:cat_api/features/nav_bar/presentation/manager/nav_bar_cubit/navbar_cubit.dart';
-import 'package:cat_api/features/nav_bar/presentation/view/nav_bar_screen.dart';
+import 'package:cat_api/features/landing/presentation/screen/landing_screen.dart';
+import 'package:cat_api/features/nav_bar/presentation/manager/nav_bar_cubit/navbar_cubit.dart'; 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -61,7 +61,7 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
         MaterialPageRoute(
           builder: (context) => BlocProvider(
             create: (context) => NavBarCubit(),
-            child: const NavBarScreen(),
+            child: const LandingScreen(),
           ),
         ),
       );
