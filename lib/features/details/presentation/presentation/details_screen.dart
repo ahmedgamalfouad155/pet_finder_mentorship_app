@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({super.key, required this.data});
-  final CatBreedModel data; 
+  final CatBreedModel data;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class DetailsScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: DetailsScreenBody(),
+      body: DetailsScreenBody(data: data),
     );
   }
 }
