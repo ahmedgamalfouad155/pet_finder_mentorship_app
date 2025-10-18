@@ -18,11 +18,8 @@ abstract class AppStyles {
     color: context.appColors.greyNavBar,
   );
 
-  static TextStyle textStyle14(BuildContext context) => TextStyle(
-    fontSize: 14.sp,
-    fontWeight: FontWeight.bold,
-    color: context.appColors.black,
-  );
+  static TextStyle textStyle14(BuildContext context) =>
+      TextStyle(fontSize: 14.sp, color: context.appColors.grey);
 
   static TextStyle textStyle16(BuildContext context) => TextStyle(
     fontSize: 16.sp,

@@ -26,7 +26,7 @@ class CustomsBoxDecoration {
 
   BoxDecoration customFiltersBoxDecoration(BuildContext context) {
     return BoxDecoration(
-      color: context.appColors.white,
+      color: context.appColors.tealBackground,
       boxShadow: [
         BoxShadow(
           color: context.appColors.teal.withAlpha((0.4 * 255).toInt()),
