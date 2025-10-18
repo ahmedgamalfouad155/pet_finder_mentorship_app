@@ -1,9 +1,11 @@
 import 'package:cat_api/core/theme/colors.dart';
 import 'package:cat_api/features/details/presentation/presentation/widgets/details_screen_body.dart';
+import 'package:cat_api/features/home/data/models/cat_breed_model.dart';
 import 'package:flutter/material.dart';
 
 class DetailsScreen extends StatelessWidget {
-  const DetailsScreen({super.key});
+  const DetailsScreen({super.key, required this.data});
+  final CatBreedModel data; 
 
   @override
   Widget build(BuildContext context) {

@@ -1,21 +1,24 @@
-import 'package:cat_api/core/constants/images.dart';
+import 'package:cat_api/core/extentions/image_extenteion.dart';
 import 'package:cat_api/core/theme/colors.dart';
 import 'package:cat_api/core/theme/customs_box_decoratino.dart';
 import 'package:cat_api/core/theme/styles.dart';
 import 'package:cat_api/core/utils/media_query_values.dart';
 import 'package:cat_api/features/details/presentation/presentation/details_screen.dart';
+import 'package:cat_api/features/home/data/models/cat_breed_model.dart';
 import 'package:flutter/material.dart';
 
 class AnimalItemWidget extends StatelessWidget {
-  const AnimalItemWidget({super.key});
+  const AnimalItemWidget({super.key, required this.data});
+  final CatBreedModel data;
 
   @override
   Widget build(BuildContext context) {
+    final imageUrl = data.imageId.toCatImageUrl;
     return InkWell(
       onTap: () {
-        Navigator.of(
-          context,
-        ).push(MaterialPageRoute(builder: (context) => const DetailsScreen()));
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (context) => DetailsScreen(data: data)),
+        );
       },
       child: Container(
         width: context.width,
@@ -29,12 +32,13 @@ class AnimalItemWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
 
           children: [
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: context.appColors.tealBackground,
+            ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.network(
+                imageUrl,
+                width: context.width * 0.3,
+                fit: BoxFit.cover,
               ),
-              child: Image.asset(AppImages.dog1, width: context.width * 0.3),
             ),
             const SizedBox(width: 10),
             Expanded(
@@ -45,7 +49,13 @@ class AnimalItemWidget extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("Joli", style: AppStyles.textStyle18(context)),
+                      Expanded(
+                        child: Text(
+                          data.name,
+                          style: AppStyles.textStyle18(context),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
 
                       Icon(
                         Icons.favorite_border,
@@ -59,7 +69,7 @@ class AnimalItemWidget extends StatelessWidget {
                     children: [
                       Icon(Icons.location_on, color: Colors.red),
                       Text(
-                        "1.6 km away",
+                        data.location,
                         style: AppStyles.textStyle12(context),
                       ),
                     ],
