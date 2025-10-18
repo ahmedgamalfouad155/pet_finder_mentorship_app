@@ -10,7 +10,7 @@ ScaffoldFeatureController<SnackBar, SnackBarClosedReason> customSnakBar(
       content: Text(message),
       duration: Duration(milliseconds: 500),
 
-      backgroundColor: context.appColors.primaryPurple,
+      backgroundColor: context.appColors.teal,
       behavior: SnackBarBehavior.floating,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
     ),

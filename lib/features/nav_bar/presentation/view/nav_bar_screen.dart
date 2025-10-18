@@ -1,18 +1,17 @@
-
+import 'package:cat_api/features/favorite/presentation/screens/favorite_screen.dart';
 import 'package:cat_api/features/home/presentation/screens/home_screen.dart';
 import 'package:cat_api/features/nav_bar/presentation/manager/nav_bar_cubit/navbar_cubit.dart';
 import 'package:cat_api/features/nav_bar/presentation/view/widgets/custom_buttom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class NavBarView extends StatelessWidget {
-  const NavBarView({super.key});
+class NavBarScreen extends StatelessWidget {
+  const NavBarScreen({super.key});
 
   final List<Widget> pages = const [
     HomeScreen(),
-    Center(child: Text("Explore Page")),
+    FavoriteScreen(),
     Center(child: Text("Search Page")),
-    Center(child: Text("World Page")),
     Center(child: Text("Profile Page")),
   ];
 
@@ -25,9 +24,8 @@ class NavBarView extends StatelessWidget {
           bottomNavigationBar: CustomBottomNavBar(
             items: [
               NavBarItem(icon: Icons.home_outlined, label: "Home"),
-              NavBarItem(icon: Icons.bar_chart_outlined, label: "Stats"),
-              NavBarItem(icon: Icons.search, label: "Search"),
-              NavBarItem(icon: Icons.public, label: "World"),
+              NavBarItem(icon: Icons.favorite, label: "Favorite"),
+              NavBarItem(icon: Icons.chat, label: "Chat"),
               NavBarItem(icon: Icons.person, label: "Profile"),
             ],
             onTabSelected: (index) {},
